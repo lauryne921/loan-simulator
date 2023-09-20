@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>Simulateur</title>
+</head>
+
+<body>
+  <main>
+    <div class="container">
+      <h1>Loan Simulator</h1>
+      <div id="input">
+        <div class="input-group">
+          <div class="input-group-prepend">
+            <div class="input-group-text">Amount : </div>
+            <input type="number" class="form-control" id="amountInput">
+          </div>
+        </div>
+        <div class="input-group">
+          <div class="input-group-prepend">
+            <div class="input-group-text">Years : </div>
+            <input type="number" class="form-control" id="monthInput">
+          </div>
+        </div>
+        <div class="input-group">
+          <div class="input-group-prepend">
+            <div class="input-group-text">Years % : </div>
+            <input type="number" class="form-control" id="interestInput">
+          </div>
+        </div>
+
+        <button class="btn btn-dark" onclick="getUserInfo()">calculate</button>
+      </div>
+
+      <section>
+        <div id="overview" class="mt-4"></div>
+        <div id="payement-list">
+          <table class="table mt-3 text-center">
+            <thead>
+              <tr>
+                <th>nr</th>
+                <th>date</th>
+                <th>capital payed</th>
+                <th>interest payed</th>
+                <th>loan due</th>
+              </tr>
+            </thead>
+            <tbody id="details">
+
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+    </div>
+  </main>
+  <script src="script.js"></script>
+</body>
+
+</html>
